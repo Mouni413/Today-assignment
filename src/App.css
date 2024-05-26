@@ -246,7 +246,6 @@ body {
   flex: 1;
   padding: 20px;
   padding-left: 140px;
-  padding-top: 100px;
 }
 
 .left-section h2 {
@@ -340,6 +339,8 @@ body {
   width: 200px;
   height: 200px;
   margin-left: 200px;
+  bottom: 100px;
+  right: 100px;
 }
 
 .circle {
@@ -349,75 +350,78 @@ body {
   left: 0;
 }
 .base-circle {
-  background-color: whitesmoke; /* Color of the bottom circle */
-  width: 400px; /* Increase size as needed */
-  height: 400px; /* Increase size as needed */
+  background-color: whitesmoke;
+  width: 400px;
+  height: 400px;
   z-index: 1;
-  border: 3px solid #9b7eea;
-  background-color: transparent; /* Set background to transparent */
-  overflow: hidden; /* Hide overflow content */
+  border: 3px solid #7d6ae9;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .top-circle {
-  background-color: #d9d9d9; /* Color of the top circle */
-  width: 380px; /* Increase size as needed */
-  height: 380px; /* Increase size as needed */
-  z-index: 3; /* Higher z-index */
+  background-color: #d9d9d9;
+  width: 400px;
+  height: 400px;
+  z-index: 3;
   position: absolute;
-  left: 180px; /* Adjust left position as needed */
-  top: 120%; /* Adjust top position as needed */
-  transform: translate(-50%, -50%); /* Center the circle */
+  left: 190px;
+  top: 110%;
+  transform: translate(-50%, -50%);
 }
 
 .rect {
   display: flex;
   position: absolute;
   padding: 10px;
-  width: 140px; /* Adjust size as needed */
-  height: 60px; /* Adjust size as needed */
-  background-color: white; /* Color of the rectangle */
-  right: 100px; /* Adjust left position as needed */
-  top: 60%;
-  border-radius: 10px;
+  width: 140px;
+  height: 50px;
+  background-color: white;
+  right: 130px;
+  top: 50%;
+  border-radius: 20px;
   color: #7d6ae9;
-  font-weight: 900;
   overflow: hidden;
   z-index: 14;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.rect p {
-  font-size: 16px;
+.rect-num {
+  font-size: 24px;
+  font-weight: 900;
+  margin-right: 10px;
 }
 
 .rect1 {
   display: flex;
   position: absolute;
-  width: 140px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
-  background-color: white; /* Color of the rectangle */
-  right: 490px; /* Adjust left position as needed */
-  top: 48%;
-  border-radius: 10px;
-  font-weight: 900;
+  width: 140px;
+  height: 50px;
+  background-color: white;
+  right: 490px;
+  top: 30%;
+  border-radius: 20px;
   color: #7d6ae9;
   overflow: hidden;
   z-index: 11;
   padding: 10px;
   box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
-}
-.rect1 p {
-  font-size: 12px;
-  font-weight: 800px;
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle1 {
   display: flex;
   position: absolute;
-  width: 160px; /* Adjust size as needed */
-  height: 150px; /* Adjust size as needed */ /* Color of the rectangle */
-  right: 450px; /* Adjust left position as needed */
-  top: 70%;
+  width: 160px;
+  height: 150px;
+  right: 480px;
+  top: 55%;
   background-color: #8662e8;
   color: white;
   overflow: hidden;
@@ -432,6 +436,7 @@ body {
 /*Services Section*/
 .services {
   padding: 80px;
+  font-family: sans-serif;
   height: 60vh;
   background-color: white;
   border-top: 0.5px solid rgb(224, 222, 222);
@@ -449,6 +454,7 @@ body {
   font-size: 40px;
   font-weight: 900;
   margin-bottom: 50px;
+  font-family: sans-serif;
 }
 
 .services h1 span {
@@ -464,27 +470,36 @@ body {
   padding: 20px;
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px; /* Set card width */
-  background-color: #fff; /* Default background color */
+  width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease; /* Added transition for background color */
+    background-color 0.3s ease;
   color: black;
-  text-align: justify;
+  text-align: left;
   font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1.2rem;
 }
 
 .card h3 {
   margin: 10px 0;
+  font-family: sans-serif;
 }
 
 .card h3:last-child svg {
   color: #7d6ae9;
   margin-left: 10px;
+  font-family: sans-serif;
 }
 .card:hover {
   background-color: #7d6ae9;
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.card:hover h3 {
+  color: white;
+}
+.card:hover h3:last-child svg {
   color: white;
 }
 
@@ -643,37 +658,43 @@ body {
 /*Clients Thoughts Section*/
 .client-card {
   display: flex;
-  align-items: center; /* Center align items vertically */
-  justify-content: space-between; /* Distribute items evenly along the main axis */
-  padding-right: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 2px 4px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 0;
 }
 .client-card h1 {
   font-size: 18px;
   font-weight: bold;
 }
 .client-card p {
-  color: black;
-  font-size: 12px;
+  color: #86888a;
+  font-size: 16px;
+  line-height: 1.8rem;
 }
 
 .client-card1 {
-  flex: 1;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .client-card1 p {
-  width: 400px;
+  width: 300px;
+  margin-top: 0;
+  padding-top: 0;
 }
 .mini-circle {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   background-color: #d9d9d9;
-  border-radius: 50%; /* Make the mini-circle round */
+  border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
