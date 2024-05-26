@@ -43,7 +43,7 @@ const Home = () => {
           <div className="circle top-circle"></div>
         </div>
         <div className="rect">
-          <p style={{ marginRight: "10px" }}>330 </p>
+          <p className="rect-num">330 </p>
           <p>
             Completed
             <br />
@@ -51,7 +51,7 @@ const Home = () => {
           </p>
         </div>
         <div className="rect1">
-          <p>12+</p>
+          <p className="rect-num ">12+</p>
           <p>
             Years Of
             <br />
